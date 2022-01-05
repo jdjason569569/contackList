@@ -15,6 +15,13 @@ export class ListContactComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    if(this.contactService.listContacts.length > 0){
+      this.listContacts = this.contactService.listContacts;
+    }else{
+      this.contactService.getData('assets/data/contacts.json').subscribe(list=>{
+        this.listContacts = list;
+      })
+    }
   }
 
 }

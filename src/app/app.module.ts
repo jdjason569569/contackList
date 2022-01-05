@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { ScheduleComponent } from './components/schedule/schedule.component';
 import { AddContactComponent } from './components/schedule/add-contact/add-contact.component';
 import { ListContactComponent } from './components/schedule/list-contact/list-contact.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ListContactComponent } from './components/schedule/list-contact/list-co
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
